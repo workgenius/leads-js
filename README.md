@@ -33,3 +33,10 @@ angular.module("app", ['workgenius'])
     });
 });
 ```
+
+
+### Flowchart
+
+A representation of the Candidate, "Company A" (selling leads), WorkGenius and "Company B" (buying leads).
+
+<img width="941" alt="wgadflowchart" src="https://cloud.githubusercontent.com/assets/10408393/21162095/71adf240-c140-11e6-8c58-9aa346eab828.png">
