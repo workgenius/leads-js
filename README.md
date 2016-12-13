@@ -3,12 +3,12 @@
 ### Getting started
 
 - Include workgenius.js or workgenius.min.js in your project
-```
+```html
 <script src="./workgenius.js"></script>
 ```
 
 - Add the workgenius module to your app
-```
+```javascript
 angular.module("app",
     ['workgenius'])
 ```
@@ -21,7 +21,7 @@ angular.module("app",
 - Call workgeni.init() first with your API Username and Password.
 - Submit applicant information
 
-```
+```javascript
 angular.module("app", ['workgenius'])
 .controller('myCtrl', function($scope, workgenius) {
     $scope.workgenius = workgenius;
