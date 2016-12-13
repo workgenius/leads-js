@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./app.css">
+<script src="./app.js"></script>
+<script src="./workgenius.js"></script>
+<body>
+
+<div ng-app="app" ng-controller="myCtrl">
+  <p>Sorry you do not qualify for lyft</p>
+
+  <div ng-if="!workgenius.error">
+      <p>Here are some other companies you can apply to</p>
+
+      <div ng-repeat="job in workgenius.jobs">    
+          <h1>{{job.company}}</h1>
+          <p>{{job.description}}</p>
+          <button ng-if="!job.error && !job.success" ng-click="workgenius.apply(job)">Apply</button>
+          <button ng-if="job.success" ng-href="job.redirectUrl">Continue</button>
+          <div ng-if="job.error">
+              <p>{{job.error}}</p>
+          </div>
+      </div>
+  </div>
+  <div ng-if="workgenius.error">
+      <p>{{workgenius.error}}</p>
+  </div>
+
+</div>
+
+</body>
+</html>
